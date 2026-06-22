@@ -37,7 +37,9 @@
               </li>
 
               <li className="nav-item">
-                <NavLink to="/services" className="nav-link">
+                <NavLink to="/services" className={({ isActive }) =>
+                    isActive ? "nav-link active-link" : "nav-link"
+                  }>
                   Services
                 </NavLink>
               </li>
