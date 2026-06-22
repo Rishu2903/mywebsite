@@ -1,0 +1,116 @@
+/* =========================
+   GLASS NAVBAR (WORLD CLASS)
+========================= */
+.custom-navbar {
+  background: rgba(10, 14, 25, 0.45); /* lighter */
+  backdrop-filter: blur(10px);        /* reduce blur */
+  -webkit-backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+/* subtle scroll enhancement (optional JS support) */
+.custom-navbar.scrolled {
+  background: rgba(10, 14, 25, 0.85);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* =========================
+   BRAND (SOFT PREMIUM GRADIENT)
+========================= */
+.brand {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+
+  background: linear-gradient(90deg, #ffffff, #a78bfa, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  transition: opacity 0.3s ease;
+}
+
+.brand:hover {
+  opacity: 0.85;
+}
+
+/* =========================
+   NAV LINKS (CLEAN SaaS STYLE)
+========================= */
+.nav-link {
+  color: rgba(234, 240, 255, 0.7) !important;
+  font-size: 14px;
+  font-weight: 500;
+
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+/* hover state */
+.nav-link:hover {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* underline animation (subtle, not aggressive) */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+
+  width: 0%;
+  height: 1.5px;
+
+  background: linear-gradient(90deg, #a78bfa, #38bdf8);
+  border-radius: 10px;
+
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* =========================
+   ACTIVE LINK (IMPORTANT UX HIGHLIGHT)
+========================= */
+.active-link {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+.active-link::after {
+  width: 100%;
+  background: linear-gradient(90deg, #ffffff, #38bdf8);
+}
+
+/* =========================
+   MOBILE MENU TOGGLER
+========================= */
+.navbar-toggler {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: none !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* icon readability */
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* =========================
+   MOBILE MENU UX
+========================= */
+@media (max-width: 991px) {
+  .navbar-nav {
+    padding: 16px 0;
+    gap: 8px !important;
+  }
+
+  .nav-link {
+    font-size: 16px;
+  }
+}
